@@ -24,7 +24,7 @@ function getLocation()
 
 async function FetchForecast (props) 
 {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max&hourly=relative_humidity_2m&timezone=${props.timezone}`
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${props.latitude}&longitude=${props.longitude}&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max&hourly=relative_humidity_2m&timezone=${props.timezone}`
 
     try
     {
@@ -43,4 +43,4 @@ async function FetchForecast (props)
         return null;
     }
 }
-console.log(FetchForecast({latitude:"-23.55", longitude:"-46.63"}))
+console.log(FetchForecast({latitude:"-23.55", longitude:"-46.63", timezone: "auto"}))
