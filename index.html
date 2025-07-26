@@ -4,38 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="Main-Container">
-        <h1>Weather Forecast</h1>
-        <div>
+    <div id="Main-Container" class="main-container">
+        <h1 class="title">Weather Forecast</h1>
+
+        <div class="localization">
             <h2>Choose localization method</h2>
-            <div>
-                <input type="checkbox" id="custom">Custom
-                <input type="checkbox" id="auto">Auto
-                <div>
+
+            <div class="checkbox-container">
+                <span class="choice"><input type="checkbox" id="custom">Custom</span>
+                <span class="choice"><input type="checkbox" id="auto">Auto</span>
+                
+            </div>
+
+            <div id="methods" class="methods">
+                
+                <div class="custom-container"> 
                 <form action="/enviar" method="POST">
                     <div>
                         <label for="latitude">Latitude:</label><br />
                         <input type="text" id="latitude" name="latitude" required />
                     </div>
 
-                    <div style="margin-top: 1rem;">
+                    <div>
                         <label for="longitude">Longitude:</label><br />
                         <input type="number" id="longitude" name="longitude" required />
                     </div>
 
-                    <button type="submit" style="margin-top: 1rem;">Enviar</button>
+                    <button type="submit">Load Localization</button>
                     </form>
-            </div>
+                </div>
 
-            <div>
-                <Button>Load Localization</Button>
-            </div>
+                <div class="auto-container">
+                    <div>
+                        <label for="latitude">Latitude:</label><br />
+                        <input type="text" id="latitude" name="latitude" required />
+                    </div>
+
+                    <div>
+                        <label for="longitude">Longitude:</label><br />
+                        <input type="number" id="longitude" name="longitude" required />
+                    </div>
+                    <Button>Load Localization</Button>
+                </div>
+
             </div> 
         </div>
+
+        <button id="search">Search</button>
+
+        <div id="result" class="result">
+            <p>Rain: </p>
+            <p>Humidity:</p>
+            <p>Wind: </p>
+            <p>max: </p>
+            <p>min: </p>
+        </div>
+
     </div>
-    <script src="script.js"></script>
+    <script src="locationapi.js"></script>
     <script src="htmlhandler.js"></script>
 </body>
 </html>
