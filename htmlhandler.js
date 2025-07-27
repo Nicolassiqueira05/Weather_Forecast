@@ -41,19 +41,16 @@ function updateResult(data) {
     paragraphs[4].textContent = `Min: ${tempMin} °C`;
 }
 
-custom.addEventListener('change', (e) => {
-    e.target.checked ? (auto.checked = false) : null;
-});
-auto.addEventListener('change', (e) => {
-    e.target.checked ? (custom.checked = false) : null;
-});
+custom.addEventListener('change', (e) => {e.target.checked ? (auto.checked = false) : null});
+auto.addEventListener('change', (e) => {e.target.checked ? (custom.checked = false) : null;});
 
 search.addEventListener('click', async (e) => {
     let props;
 
     if (custom.checked)
     {
-        props = {
+        props = 
+        {
             latitude: document.getElementById("custom_latitude").value,
             longitude: document.getElementById("custom_longitude").value,
             timezone: "auto"
@@ -61,11 +58,8 @@ search.addEventListener('click', async (e) => {
     } 
     else if (auto.checked) 
     {
-        props = {
-            latitude: document.getElementById("auto_latitude").value,
-            longitude: document.getElementById("auto_longitude").value,
-            timezone: "auto"
-        }
+        props = await getLocation()
+        
     } else {
         window.alert("You must choose a location method");
         return;

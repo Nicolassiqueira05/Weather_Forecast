@@ -1,24 +1,26 @@
-function getLocation()
+function getLocation(callback)
 {
-    if ('geolocation' in navigator) 
-    {
-    navigator.geolocation.getCurrentPosition(
-    (position) => 
-    {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude; 
-    return ({latitude: latitude, longitude: longitude})
-    },
-    (error) => 
-    {
-    console.error('Erro ao obter localização:', error.message);
-    }
+    return new Promise((resolve, reject) =>{
+        if ('geolocation' in navigator) 
+        {
+        navigator.geolocation.getCurrentPosition(
+        (position) => 
+        {
+        props = {latitude: position.coords.latitude, longitude: position.coords.longitude, timezone: "auto"} 
+        resolve(props)
+        },
+        (error) => 
+        {
+        console.error('Erro ao obter localização:', error.message);
+        }
+        )
+        } 
+        else 
+        {
+        console.error('Geolocalização não suportada pelo navegador.');
+        }  
+        }
     )
-    } 
-    else 
-    {
-    console.error('Geolocalização não suportada pelo navegador.');
-    }   
 }
 
 
