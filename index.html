@@ -21,8 +21,9 @@
 
             <div id="methods" class="methods">
                 
-                <div class="custom-container"> 
-                <form action="/enviar" method="POST">
+                <div id="custom-container" class="method-container"> 
+                <form>
+                    <h2>Custom</h2>
                     <div>
                         <label for="latitude">Latitude:</label><br />
                         <input type="text" id="custom_latitude" name="latitude" required />
@@ -33,21 +34,25 @@
                         <input type="number" id="custom_longitude" name="longitude" required />
                     </div>
 
-                    <button type="submit">Load Localization</button>
+                    <button>Load Localization</button>
                     </form>
                 </div>
 
-                <div class="auto-container">
+                <div id="auto-container" class="method-container">
+                    <form action="/enviar" method="POST">
+                    <h2>Auto</h2>
                     <div>
                         <label for="latitude">Latitude:</label><br />
-                        <input type="text" id="auto_latitude" name="latitude" required />
+                        <input type="text" id="auto_latitude" name="latitude"/>
                     </div>
 
                     <div>
                         <label for="longitude">Longitude:</label><br />
-                        <input type="number" id="auto_longitude" name="longitude" required />
+                        <input type="number" id="auto_longitude" name="longitude"/>
                     </div>
+
                     <Button>Load Localization</Button>
+                    </form>
                 </div>
 
             </div> 
