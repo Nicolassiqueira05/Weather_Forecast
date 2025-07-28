@@ -23,10 +23,13 @@ This is a simple web application that displays the daily weather forecast based 
 
 ## How to Use:
 
-Open the app in your browser
+Open the app in your browser by:
+
 open the index.html file on your browser
+
 or
-https://nicolassiqueira05.github.io/Weather_Forecast/
+
+open the following link: https://nicolassiqueira05.github.io/Weather_Forecast/
 
 You will see two input fields:
 
@@ -34,7 +37,7 @@ Latitude
 
 Longitude
 
-You can:
+You can either:
 
 Fill in the coordinates manually
 
