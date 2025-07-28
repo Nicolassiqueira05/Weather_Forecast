@@ -11,36 +11,36 @@
         <h1 class="title">Weather Forecast</h1>
 
         <div class="localization">
-            <h2>Choose location method</h2>
+            <h2>Fulfill your coordinates or get them by pressing the blue button</h2>
 
             <div id="methods" class="methods">
                 
                 <div id="location-container" class="location-container"> 
-                <form>
-                    <h2>Localition</h2>
-                    <div>
-                        <label for="latitude">Latitude:</label><br />
-                        <input type="number" id="latitude" name="latitude" class="location-input"/>
-                    </div>
+                    <form>
+                        <h2>Manual Coordinates</h2>
+                        <div>
+                            <label for="latitude">Latitude:</label><br />
+                            <input type="number" id="latitude" name="latitude" class="location-input"/>
+                        </div>
 
-                    <div>
-                        <label for="longitude">Longitude:</label><br />
-                        <input type="number" id="longitude" name="longitude" class="location-input"/>
-                    </div>
-                </form>
-                <button id="getc">Get coords</button>
+                        <div>
+                            <label for="longitude">Longitude:</label><br />
+                            <input type="number" id="longitude" name="longitude" class="location-input"/>
+                        </div>
+                    </form>
+                    <button id="getc">Use My Current Location</button>
                 </div>
             </div> 
         </div>
 
-        <button id="search">Search</button>
+        <button id="search">Get Weather</button>
 
         <div id="result" class="result">
-            <p>Rain: </p>
+            <p>Rainfall:</p>
             <p>Humidity:</p>
-            <p>Wind: </p>
-            <p>max: </p>
-            <p>min: </p>
+            <p>Wind Speed:</p>
+            <p>Maximum Temperature:</p>
+            <p>Minimum Temperature:</p>
         </div>
 
     </div>

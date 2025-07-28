@@ -60,8 +60,8 @@ getcbutton.addEventListener('click', async (e) =>{
 
 search.addEventListener('click', async (e) => {
     let props;
-
-    if (true)
+    console.log(latitudeinput.value)
+    if (latitudeinput.value != "" && longitudeinput != "null")
     {
         props = 
         {
@@ -70,6 +70,10 @@ search.addEventListener('click', async (e) => {
             timezone: "auto"
         }
     } 
+    else
+    {
+        window.alert("Fulfill the coordinates first")
+    }
 
     try {
         let data = await FetchForecast(props);
