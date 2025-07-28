@@ -11,29 +11,27 @@
         <h1 class="title">Weather Forecast</h1>
 
         <div class="localization">
-            <h2>Fulfill your coordinates or get them by pressing the blue button</h2>
+            
 
             <div id="methods" class="methods">
                 
-                <div id="location-container" class="location-container"> 
-                    <form>
-                        <h2>Manual Coordinates</h2>
-                        <div>
-                            <label for="latitude">Latitude:</label><br />
-                            <input type="number" id="latitude" name="latitude" class="location-input"/>
-                        </div>
+                <div id="location-container" class="location-container">
+                    <p class="text">Fulfill your coordinates or get them by pressing the blue button</p>
+                        <div class="field">
+                            <input type="number" id="latitude" name="latitude" class="location-input" placeholder=" " />
+                            <label for="latitude">Latitude</label>
+                            </div>
 
-                        <div>
-                            <label for="longitude">Longitude:</label><br />
-                            <input type="number" id="longitude" name="longitude" class="location-input"/>
+                            <div class="field">
+                            <input type="number" id="longitude" name="longitude" class="location-input" placeholder=" " />
+                            <label for="longitude">Longitude</label>
                         </div>
                     </form>
-                    <button id="getc">Use My Current Location</button>
+                    <button id="getc">Current Location</button>
+                    <button id="search">Get Weather</button>
                 </div>
             </div> 
         </div>
-
-        <button id="search">Get Weather</button>
 
         <div id="result" class="result">
             <p>Rainfall:</p>

@@ -3,18 +3,6 @@ let getcbutton = document.getElementById("getc")
 let latitudeinput = document.getElementById("latitude")
 let longitudeinput = document.getElementById("longitude")
 
-function block(id) 
-{
-    switch (id) {
-        case "custom":
-            break;
-        case "auto":
-            break;
-        default:
-            break;
-    }
-}
-
 function updateResult(data) {
     if (!data || !data.daily) {
         console.error("Dados inválidos:", data);
@@ -60,8 +48,7 @@ getcbutton.addEventListener('click', async (e) =>{
 
 search.addEventListener('click', async (e) => {
     let props;
-    console.log(latitudeinput.value)
-    if (latitudeinput.value != "" && longitudeinput != "null")
+    if (latitudeinput.value != "" && longitudeinput.value != "")
     {
         props = 
         {
