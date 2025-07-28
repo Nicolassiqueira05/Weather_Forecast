@@ -49,6 +49,6 @@ Click the Get Weather button to retrieve the weather forecast based on the provi
 
 The Geolocation API may prompt the user for permission. It only works over HTTPS or on localhost.
 
-## Developed by Nicolas Siqueira
+### Developed by Nicolas Siqueira
 
-## This project is for educational purposes. Feel free to use, modify, or improve it, but remember to always follow the fair use policy of the APIs. this is the ideal for me i just want you to correct spacing
+This project is for educational purposes. Feel free to use, modify, or improve it, but remember to always follow the fair use policy of the APIs. this is the ideal for me i just want you to correct spacing
