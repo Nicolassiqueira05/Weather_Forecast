@@ -23,6 +23,16 @@ function getLocation(callback)
     )
 }
 
+async function FetchLocation(props) {
+    try {
+        const response = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${props.latitude}&longitude=${props.longitude}`);
+        const data = await response.json();
+        console.log(data);
+        return data
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 async function FetchForecast (props) 
 {
@@ -46,3 +56,4 @@ async function FetchForecast (props)
     }
 }
 console.log(FetchForecast({latitude:"-23.55", longitude:"-46.63", timezone: "auto"}))
+console.log(FetchLocation({latitude:"-23.55", longitude:"-46.63"}))

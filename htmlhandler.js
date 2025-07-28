@@ -1,6 +1,7 @@
-let custom = document.getElementById("custom");
-let auto = document.getElementById("auto");
 let search = document.getElementById("search");
+let getcbutton = document.getElementById("getc")
+let latitudeinput = document.getElementById("latitude")
+let longitudeinput = document.getElementById("longitude")
 
 function block(id) 
 {
@@ -41,29 +42,34 @@ function updateResult(data) {
     paragraphs[4].textContent = `Min: ${tempMin} °C`;
 }
 
-custom.addEventListener('change', (e) => {e.target.checked ? (auto.checked = false) : null});
-auto.addEventListener('change', (e) => {e.target.checked ? (custom.checked = false) : null;});
+getcbutton.addEventListener('click', async (e) =>{
+    try
+    {
+        let data = await getLocation()
+        latitudeinput.value = data.latitude
+        longitudeinput.value = data.longitude
+        let location = await FetchLocation({latitude: data.latitude, longitude: data.longitude})
+        window.alert(`Location got: ${location.countryName}, ${location.principalSubdivision}, ${location.city}`)
+    }
+    catch (error)
+    {
+        console.log(error)
+    }
+    
+})
 
 search.addEventListener('click', async (e) => {
     let props;
 
-    if (custom.checked)
+    if (true)
     {
         props = 
         {
-            latitude: document.getElementById("custom_latitude").value,
-            longitude: document.getElementById("custom_longitude").value,
+            latitude: document.getElementById("latitude").value,
+            longitude: document.getElementById("longitude").value,
             timezone: "auto"
         }
     } 
-    else if (auto.checked) 
-    {
-        props = await getLocation()
-        
-    } else {
-        window.alert("You must choose a location method");
-        return;
-    }
 
     try {
         let data = await FetchForecast(props);

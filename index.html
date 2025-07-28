@@ -11,50 +11,25 @@
         <h1 class="title">Weather Forecast</h1>
 
         <div class="localization">
-            <h2>Choose localization method</h2>
-
-            <div class="checkbox-container">
-                <span class="choice"><input type="checkbox" id="custom">Custom</span>
-                <span class="choice"><input type="checkbox" id="auto">Auto</span>
-                
-            </div>
+            <h2>Choose location method</h2>
 
             <div id="methods" class="methods">
                 
-                <div id="custom-container" class="method-container"> 
+                <div id="location-container" class="location-container"> 
                 <form>
-                    <h2>Custom</h2>
+                    <h2>Localition</h2>
                     <div>
                         <label for="latitude">Latitude:</label><br />
-                        <input type="text" id="custom_latitude" name="latitude" required />
+                        <input type="number" id="latitude" name="latitude" class="location-input"/>
                     </div>
 
                     <div>
                         <label for="longitude">Longitude:</label><br />
-                        <input type="number" id="custom_longitude" name="longitude" required />
+                        <input type="number" id="longitude" name="longitude" class="location-input"/>
                     </div>
-
-                    <button>Load Localization</button>
-                    </form>
+                </form>
+                <button id="getc">Get coords</button>
                 </div>
-
-                <div id="auto-container" class="method-container">
-                    <form action="/enviar" method="POST">
-                    <h2>Auto</h2>
-                    <div>
-                        <label for="latitude">Latitude:</label><br />
-                        <input type="text" id="auto_latitude" name="latitude"/>
-                    </div>
-
-                    <div>
-                        <label for="longitude">Longitude:</label><br />
-                        <input type="number" id="auto_longitude" name="longitude"/>
-                    </div>
-
-                    <Button>Load Localization</Button>
-                    </form>
-                </div>
-
             </div> 
         </div>
 
