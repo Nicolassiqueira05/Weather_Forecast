@@ -17,7 +17,7 @@ BigDataCloud Reverse Geocoding API Convert latitude/longitude into location name
 Open-Meteo API	Fetch weather forecast data (temperature, rain, wind, humidity)
 
 How to Use
-Open the app in your browser (just open the index.html file or this link: colocar o link aqui depois)
+Open the app in your browser (just open the index.html file or this link: https://nicolassiqueira05.github.io/Weather_Forecast/ )
 
 You will see two input fields:
 
